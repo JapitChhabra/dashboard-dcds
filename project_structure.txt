@@ -1,0 +1,12 @@
+company_dashboard/
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+├── templates/
+│   ├── base.html
+│   └── dashboard.html
+├── app.py
+├── config.py
+└── requirements.txt 

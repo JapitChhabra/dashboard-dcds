@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maven Fuzzy Factory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <span>Maven Fuzzy Factory</span>
+            </div>
+            <div class="nav-items">
+                <button class="nav-item">
+                    <i data-lucide="search"></i>
+                </button>
+                <button class="nav-item">
+                    <i data-lucide="bell"></i>
+                </button>
+                <button class="nav-item">
+                    <i data-lucide="user"></i>
+                </button>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

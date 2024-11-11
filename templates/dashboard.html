@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Database Structure</h2>
+        </div>
+        <div class="database-tree">
+            <div class="tree-item database">
+                <div class="tree-content">
+                    <i data-lucide="chevron-down" class="tree-arrow"></i>
+                    <i data-lucide="database" class="icon-database"></i>
+                    <span>MavenFuzzyFactoryDB</span>
+                </div>
+                <div id="table-list" class="tree-children">
+                    <!-- Tables will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
+        <div class="content-header">
+            <div class="header-title">
+                <h2 id="selected-table">Select a table</h2>
+            </div>
+            <div class="header-actions">
+                <button class="add-button" id="add-item-btn">
+                    <i data-lucide="plus"></i>
+                    Add Item
+                </button>
+            </div>
+        </div>
+        <div class="table-stats">
+            <div class="stat-card">
+                <div class="stat-title">Total Rows</div>
+                <div class="stat-value" id="total-rows">0</div>
+                <i data-lucide="table" class="stat-icon"></i>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Columns</div>
+                <div class="stat-value" id="total-columns">0</div>
+                <i data-lucide="columns" class="stat-icon"></i>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Primary Key</div>
+                <div class="stat-value" id="primary-key">id</div>
+                <i data-lucide="key" class="stat-icon"></i>
+            </div>
+        </div>
+        <div class="content-body" id="table-content"></div>
+    </main>
+</div>
+{% endblock %} 
